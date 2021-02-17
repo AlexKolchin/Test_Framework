@@ -7,4 +7,4 @@ class MainPageLocators():
 
 class LoginPageLocators():
     LOG_IN = (By.XPATH, "/html/body/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]")
-    FORGOT_PASSWORD = (By.XPATH, "/html/body/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]")
+    FORGOT_PASSWORD = (By.XPATH, "/html/body/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/a")
