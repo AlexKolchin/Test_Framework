@@ -10,3 +10,8 @@ class MainPage(BasePage):
     def login_link_selector(self):
         return self.browser.find_element(*MainPageLocators.LOGIN_LINK)
 
+    def header_one_selector(self):
+        return self.browser.find_element(*MainPageLocators.HELLO_WORLD)
+
+    def header_one_selector_cn(self):
+        return self.browser.find_element(*MainPageLocators.HELLO_WORLD_CN)
