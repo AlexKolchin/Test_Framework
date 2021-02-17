@@ -1,5 +1,5 @@
-from .base_page import BasePage
-from .locators import MainPageLocators
+from pages.base_page import BasePage
+from pages.locators import MainPageLocators
 
 
 class MainPage(BasePage):
@@ -8,4 +8,5 @@ class MainPage(BasePage):
         login_link.click()
 
     def login_link_selector(self):
-        self.browser.find_element(*MainPageLocators.LOGIN_LINK)
+        return self.browser.find_element(*MainPageLocators.LOGIN_LINK)
+
