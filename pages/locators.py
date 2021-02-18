@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators():
     LOGIN_LINK = (By.XPATH, "/html/body/div/nav/div/ul/li[3]/a")
+    HELLO_WORLD = (By.CSS_SELECTOR, ".page.text > h1")
+    HELLO_WORLD_CN = (By.CSS_SELECTOR, ".page.text > h1 > span")
 
 
 class LoginPageLocators():
