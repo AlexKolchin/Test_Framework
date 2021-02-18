@@ -60,3 +60,4 @@ def test_design_patterns_side_bar_is_available(browser):
     assert page.structural_patterns_selector().is_displayed(), "Structural Patterns button is not displayed"
     assert page.behavioral_patterns_selector().is_displayed(), "Behavioral Patterns button is not displayed"
     assert page.code_examples_selector().is_displayed(), "Code Examples button is not displayed"
+    
