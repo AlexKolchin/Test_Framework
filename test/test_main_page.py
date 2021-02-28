@@ -29,17 +29,6 @@ def test_guest_should_see_login_link(browser):
     assert "Log in" == page.login_link_selector().get_attribute("title"), "Login link is incorrect"
 
 
-def test_guest_can_go_to_contact_us_popup(browser):
-    """
-    Test to verify guest can open "Contact Us" link
-    :param browser: load webdriver
-    :return: TRUE if link is opened
-    """
-    page = MainPage(browser, MAIN_PAGE)
-    page.open()
-    page.contact_us_footer_open()
-
-
 def test_premium_content_side_bar_is_available(browser):
     """
     Test to verify that Premium Content side bar is available

@@ -6,7 +6,7 @@ def test_number_of_design_patterns(browser):
     """
     Test to verify that number of patterns on main page equals the real number of patterns
     :param browser: load webdriver
-    :return: 
+    :return:
     """
     page = DesignPatternsPage(browser, DESIGN_PATTERNS_PAGE)
     page.open()
