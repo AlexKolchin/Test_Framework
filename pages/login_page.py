@@ -3,10 +3,6 @@ from pages.locators import LoginPageLocators
 
 
 class LoginPage(BasePage):
-
-    def login_url(self):
-        return self.browser.current_url
-
     def login_button(self):
         return self.browser.find_element(*LoginPageLocators.LOG_IN)
 

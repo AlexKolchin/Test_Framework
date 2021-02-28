@@ -20,9 +20,6 @@ class MainPage(BasePage):
         premium_content_link = self.browser.find_element(*MainPageLocators.PREMIUM_CONTENT)
         premium_content_link.click()
 
-    def premium_url(self):
-        return self.browser.current_url
-
     def design_patterns_ebook_selector(self):
         return self.browser.find_element(*MainPageLocators.DESIGN_PATTERN_EBOOK)
 
@@ -31,9 +28,6 @@ class MainPage(BasePage):
 
     def refactoring_open(self):
         self.browser.find_element(*MainPageLocators.REFACTORING).click()
-
-    def refactoring_url(self):
-        return self.browser.current_url
 
     def what_is_refactoring_selector(self):
         return self.browser.find_element(*MainPageLocators.WHAT_IS_REFACTORING)
@@ -49,9 +43,6 @@ class MainPage(BasePage):
 
     def design_patterns_open(self):
         self.browser.find_element(*MainPageLocators.DESIGN_PATTERNS).click()
-
-    def design_patterns_url(self):
-        return self.browser.current_url
 
     def what_is_a_pattern_selector(self):
         return self.browser.find_element(*MainPageLocators.WHAT_IS_A_PATTERN)
@@ -70,4 +61,7 @@ class MainPage(BasePage):
 
     def code_examples_selector(self):
         return self.browser.find_element(*MainPageLocators.CODE_EXAMPLES)
+
+
+
 

@@ -9,6 +9,13 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
+    def wait(self):
+        self.browser.implicitly_wait(10)
+
+    def get_url(self):
+        return self.browser.current_url
+
+
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
