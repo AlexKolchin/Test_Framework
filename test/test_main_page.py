@@ -1,10 +1,6 @@
 import pytest
 from pages.main_page import MainPage
-from pages.constants import *
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-import time
+from pages.constants import MAIN_PAGE, MAIN_PAGE_CN, LANGUAGES, HELLO_WORLD_H1
 
 
 def test_guest_can_go_to_login_page(browser):

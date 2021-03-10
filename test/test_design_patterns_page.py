@@ -1,5 +1,5 @@
 from pages.design_patterns import DesignPatternsPage
-from pages.constants import *
+from pages.constants import DESIGN_PATTERNS_PAGE
 
 
 def test_number_of_design_patterns(browser):

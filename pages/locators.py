@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
+class MainPageLocators:
     LOGIN_LINK = (By.XPATH, "/html/body/div/nav/div/ul/li[3]/a")
     HELLO_WORLD = (By.CSS_SELECTOR, ".page.text > h1")
     HELLO_WORLD_CN = (By.CSS_SELECTOR, ".page.text > h1 > span")
@@ -22,17 +22,23 @@ class MainPageLocators():
     CODE_EXAMPLES = (By.CSS_SELECTOR, ".animated.trail.active > ul > li:nth-child(6) > a")
 
 
-class LoginPageLocators():
+class LoginPageLocators:
     LOG_IN = (By.XPATH, "/html/body/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[1]")
     FORGOT_PASSWORD = (By.XPATH, "/html/body/div/div/div/div/div/div[1]/div[1]/form/div[2]/div[2]/a")
+    ALERT_WHOOPS = (By.CSS_SELECTOR, ".alert.alert-danger")
+    EMAIL_IS_REQUIRED = (By.CSS_SELECTOR, ".alert.alert-danger > ul > li:nth-child(1)")
+    PASSWORD_IS_REQUIRED = (By.CSS_SELECTOR, ".alert.alert-danger > ul > li:nth-child(2)")
+    WRONG_CREDENTIALS = (By.CSS_SELECTOR, ".alert.alert-danger > ul > li")
+    EMAIL_FIELD = (By.ID, "email")
+    PASSWORD_FIELD = (By.ID, "password")
 
 
-class ContactUsPopupLocators():
+class ContactUsPopupLocators:
     CONTACT_US_POPUP = (By.XPATH, '//*[@id="module_add_topic"]')
     CONTACT_US_FOOTER = (By.CSS_SELECTOR, ".footer-list.footer-list-horizontal > li:nth-child(6) > a")
 
 
-class DesignPatternsLocators():
+class DesignPatternsLocators:
     LIST_OF_DESIGN_PATTERNS = (By.CSS_SELECTOR, ".dp4-p.dp-abs.dp-c.dp-p > span:nth-child(1)")
     CATALOG_INSIDE_OPEN = (By.CSS_SELECTOR, ".dp4-b.dp-abs.dp-c.dp-b > span > a")
     PATTERN_CARDS = (By.CSS_SELECTOR, ".pattern-card")

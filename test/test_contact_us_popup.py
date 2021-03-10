@@ -1,5 +1,5 @@
 from pages.contact_us_popup import ContactUsPopup
-from pages.constants import *
+from pages.constants import MAIN_PAGE
 
 
 def test_contact_us_popup_is_available(browser):
@@ -11,6 +11,6 @@ def test_contact_us_popup_is_available(browser):
     page = ContactUsPopup(browser, MAIN_PAGE)
     page.open()
     page.contact_us_footer_open()
-    page.wait()
+    page.wait(5)
     page.switch_to_contact_us_popup()
     assert page.contact_us_popup_selector().is_displayed(), "Contact us pop up is not displayed"
