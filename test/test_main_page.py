@@ -1,6 +1,6 @@
 import pytest
 from pages.main_page import MainPage
-from pages.constants import MAIN_PAGE, MAIN_PAGE_CN, LANGUAGES, HELLO_WORLD_H1
+from pages.constants import MAIN_PAGE, MAIN_PAGE_CN, LANGUAGES, HELLO_WORLD_H1, PREMIUM_CONTENT_PAGE, REFACTORING_PAGE, DESIGN_PATTERNS_PAGE
 
 
 def test_guest_can_go_to_login_page(browser):
