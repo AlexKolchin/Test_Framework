@@ -1,8 +1,11 @@
+import allure
+from allure_commons.types import AttachmentType
+
 from pages.login_page import LoginPage
 from pages.constants import LOGIN_PAGE
-import time
 
 
+@allure.severity(allure.severity_level.MINOR)
 def test_login_page_is_present(browser):
     """
     Test to verify login page is working
@@ -11,11 +14,12 @@ def test_login_page_is_present(browser):
     """
     page = LoginPage(browser, LOGIN_PAGE)
     page.open()
-    assert "login" in page.get_url(), "Login url is not correct"
+    assert "logifn" in page.get_url(), "Login url is not correct"
     assert page.login_button().is_enabled(), "Login button is not enabled"
     assert "forgot" == page.forgot_password_link().get_attribute("class"), "Forgot Password link is not correct"
 
 
+@allure.severity(allure.severity_level.NORMAL)
 def test_cant_login_with_unregistered_email(browser):
     """
     Test to varify unregistered user cant login
@@ -31,6 +35,7 @@ def test_cant_login_with_unregistered_email(browser):
     assert 'These credentials do not match our records.' == page.wrong_credentials_text(), "Wrong credentials message is incorrect"
 
 
+@allure.severity(allure.severity_level.MINOR)
 def test_wrong_email_popup(browser):
     """
     Test to verify that help pop-up apperas when incorrect email format is entered
@@ -40,11 +45,14 @@ def test_wrong_email_popup(browser):
     page = LoginPage(browser, LOGIN_PAGE)
     page.open()
     page.enter_email("dsadsada")
-    page.click_login()
-    print(page.alert_message())
-    time.sleep(5)
+    with allure.step('Open login popup'):
+        page.click_login()
+        assert "alert" == page.alert_message()
+    with allure.step('Taking screenshot'):
+        allure.attach(browser.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
 
 
+@allure.severity(allure.severity_level.MINOR)
 def test_empty_login(browser):
     """
     Test to verify that user cant login with empty data
